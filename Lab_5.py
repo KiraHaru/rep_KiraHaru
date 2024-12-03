@@ -18,11 +18,11 @@ def check_for_save_data(input_data):
             return True
 
 
-def get_ai_step(number_of_stones):
+def get_pc_step(number_of_stones):
     if number_of_stones <= 4:
         return 1, abs(1 - number_of_stones)
-    ai_step = random.randint(1, 3)
-    return number_of_stones - ai_step, ai_step
+    pc_step = random.randint(1, 3)
+    return number_of_stones - pc_step, pc_step
 
 
 if start_of_the_game():
@@ -49,7 +49,7 @@ if start_of_the_game():
                 print(f"\nТекущее значение камней в куче: {number_of_stones}\n")
                 print("Ход другого игрока ...")
 
-                number_of_stones, ai_stone_choose = get_ai_step(number_of_stones)
+                number_of_stones, ai_stone_choose = get_pc_step(number_of_stones)
 
                 if ai_stone_choose == 1:
                     print(f"Другой игрок убрал {ai_stone_choose} камень из кучи")
