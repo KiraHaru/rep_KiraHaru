@@ -15,7 +15,7 @@ def check_for_save_data(input_data):
             return False
         if (int(input_data) < 1) or (int(input_data) > 3):
             return False
-        return True
+            return True
 
 
 def get_ai_step(number_of_stones):
